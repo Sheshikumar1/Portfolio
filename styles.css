@@ -12,7 +12,7 @@ body{
     top:0;
     width:100%;
     padding:20px 10%;
-    background: transparent;
+    background:#081b29;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,6 +39,7 @@ body{
     transition: .3s;
     opacity:0;
     animation: slideTop .5s ease forwards;
+    animation-delay:calc(.2s * var(--i)) ;
     
 }
 .navbar a:hover{
@@ -116,9 +117,12 @@ body{
 }
 .home-content h3 span{
     color:#0ef;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
 }
 .home-content h3:nth-of-type(2){
     margin-bottom: 30px;
+
 }
 .home-content h1{
   font-size: 56px;
@@ -150,7 +154,7 @@ body{
     margin:30px 25px 30px 0;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
-    animation-delay: calc(.2s * var)
+    animation-delay: calc(.2s * var(--i));
 
 
 }.home-sci a:hover{
@@ -168,6 +172,11 @@ body{
    letter-spacing: 1px;
    text-decoration: none;
    font-weight: 600;
+   opacity: 0;
+   animation: slideTop 1s ease forwards;
+   animation-delay: 2s;
+   box-shadow: 0 0 5px #0ef,
+   0 0 25px #0ef;
 }
 .btn-box:hover{
     box-shadow: 0 0 5px cyan,
@@ -175,12 +184,65 @@ body{
     0 0 100px cyan,0 0 200px cyan
 
 }
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap:1.5rem;
+   background: #0e1a2b; 
+  
+
+    
+}
+.about-img img{
+    
+   margin-left:20%;
+   
+    width: 30vw; /* Use viewport width for responsiveness */
+    height: 30vw; /* Maintain a square shape */
+    max-width: 300px; /* Set a maximum size */
+    max-height: 300px; /* Set a maximum size */
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    background: linear-gradient(to right, #00f, #f0f);
+    box-shadow: 0 0 5px cyan,
+                0 0 25px cyan,
+                0 0 50px cyan,
+                0 0 100px cyan,
+                0 0 200px cyan; /* Glowing effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #00f, #f0f);
+}
+.about-text h2{
+    font-size: 60px ;
+}
+.about-text h2 span{
+   color:#0ef
+}
+.about-text h4{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+    color:#fff;
+
+}
+.about-text p{
+    color:aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom:4rem;
+}
+
 @keyframes slideRight{
     0% {
         transform: translateX(-100px);
         opacity: 0;
     }
-    0%{
+    100%{
         transform: translateX(0px);
         opacity: 1;
     }
@@ -190,7 +252,7 @@ body{
         transform: translateX(100px);
         opacity: 0;
     }
-    0%{
+    100%{
         transform: translateX(0px);
         opacity: 1;
     }
@@ -201,7 +263,7 @@ body{
         transform: translateY(100px);
         opacity: 0;
     }
-    0%{
+    100%{
         transform: translateY(0px);
         opacity: 1;
     }
@@ -212,7 +274,7 @@ body{
         transform: translateY(-100px);
         opacity: 0;
     }
-    0%{
+    100%{
         transform: translateY(0px);
         opacity: 1;
     }}
