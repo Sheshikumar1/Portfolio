@@ -236,6 +236,9 @@ body{
     line-height: 1.4;
     margin-bottom:4rem;
 }
+.Skill{
+    background:#081b29;
+}
 
 @keyframes slideRight{
     0% {
